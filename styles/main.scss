@@ -1,3 +1,21 @@
-* {
-    font-family: 'Noto Sans KR', sans-serif;
-}
+@import './base/_fonts.scss';
+@import './base/_normalize.scss';
+@import './base/_reset.scss';
+@import './constants/_colors.scss';
+@import './constants/_typography.scss';
+
+
+// 문법 $변수
+// 변수 소문자는 - 와, 대문자는 _ 와 .. 우리는 소문자만 사용하기로 ~
+// 스코프
+
+// $carrot-1: 1;
+
+// p {
+//     line-height: $carrot-1  
+// }
+
+// a {
+//     $carrot-1: 2;
+//     line-height: $carrot-1  
+// }
