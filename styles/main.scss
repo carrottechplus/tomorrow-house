@@ -1,8 +1,11 @@
-@import './base/_fonts.scss';
-@import './base/_normalize.scss';
-@import './base/_reset.scss';
-@import './constants/_colors.scss';
-@import './constants/_typography.scss';
+@import 'constants/_colors';
+@import 'constants/_typography';
+
+@import 'base/_fonts';
+@import 'base/_normalize';
+@import 'base/_reset';
+
+@import 'layouts/_grids';
 
 
 // 문법 $변수
