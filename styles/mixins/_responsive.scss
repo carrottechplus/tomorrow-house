@@ -1,0 +1,27 @@
+@mixin responsive($screen) {
+    @if ($screen == 'T') {
+        @media screen and (min-width: $md-breakpoint) {
+            @content;
+            // 추가적으로 스타일 선언할 때 @content 키워드 사용
+            // @include 부분이랑 양방향으로 
+        }
+    }
+    
+    @if ($screen == 'D') {
+        @media screen and (min-width: $lg-breakpoint) {
+            @content;
+        }
+    }
+}
+
+// .section {
+//     @include responsive(T) {
+//         color: red;
+//         font-size: 10px;
+
+//         .ic-close {
+//             font-size: 20px;
+//         }
+//     }
+// }
+
