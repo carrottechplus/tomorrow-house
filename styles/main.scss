@@ -9,6 +9,9 @@
 @import 'mixins/_text-style';
 @import 'mixins/_responsive';
 @import 'mixins/_positions';
+@import 'mixins/_flexbox';
+
+@import 'modules/_tags';
 
 @import 'layouts/_grids';
 
@@ -16,5 +19,3 @@
 // 문법 $변수
 // 변수 소문자는 - 와, 대문자는 _ 와 .. 우리는 소문자만 사용하기로 ~
 // 스코프
-
-// mixin .. 평소 자주 쓰는 것들
