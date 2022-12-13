@@ -1,0 +1,31 @@
+%avatar-base {
+    overflow: hidden;
+    display:block;
+    border-radius: 50%;
+    img {
+        display:block; /*사이즈 관리를 위하여 block 처리*/
+        // 세로가 길 때
+        // width:100%;
+        // height:auto;
+
+        // 가로가 길 때
+        // width:auto;
+        // height:100%;
+
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+
+.avatar-24 {
+    @extend %avatar-base;
+    width: 24px;
+    height: 24px;
+}
+
+.avatar-32 {
+    @extend %avatar-base;
+    width: 32px;
+    height: 32px;
+}
