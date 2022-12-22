@@ -1,0 +1,89 @@
+// 자주쓰는 녀석들은 반드시 공통이 있을것.. 공통 파악하기!!!
+// 3가지 기준으로 변주
+// styles, sizes, states
+// styles 관련 :: 스타일에 관해서만!! ..ㅍㅏ란색,, 회색,, border,, tip! 자주 사용하는 이름이 있음.. fill,, outlined, ghost 
+// 
+
+%btn-base {
+    @include inline-flexbox;
+    padding: 0 8px;
+    border-radius: 4px;
+    font-weight: 700;
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+
+// NOTE : button styles
+.btn-primary {
+    //btn-fill-primary
+    @extend %btn-base;
+    color: $white;
+    background-color: $blue;
+    transition: background-color 200ms ease-in-out;
+    
+    &:not(:disabled):hover {
+        background-color: $blue-dark;
+    }
+}
+
+.btn-secondary {
+    @extend %btn-base;
+    color: $primary;
+    background-color: $border;
+    transition: background-color 200ms ease-in-out;
+
+    &:not(:disabled):hover {
+        background-color: $tertiary;
+    }
+}
+
+.btn-outlined {
+    @extend %btn-base;
+    color: $blue;
+    background-color: $white;
+    border: 1px solid $blue;
+    transition: background-color 200ms ease-in-out;
+
+    &:not(:disabled):hover {
+        background-color: $blue-light;
+    }
+}
+
+.btn-ghost {
+    @extend %btn-base;
+    color: $primary;
+    background-color: transparent;
+    transition: color 200ms ease-in-out;
+
+    &:not(:disabled):hover {
+        color: $secondary;
+    }
+}
+
+// NOTE : button size --- 최대한 width값 없는게 좋음..
+.btn-32 {
+    @include text-style(14);
+    height: 32;
+}
+
+.btn-40 {
+    @include text-style(16);
+    height: 40;    
+}
+
+.btn-48 {
+    @include text-style(16);
+    height: 48;
+}
+
+.btn-55 {
+    @include text-style(18);
+    height: 55;
+}
+
+
+// NOTE : button states (상태) 는 스타일에 큰 영향을 받음
