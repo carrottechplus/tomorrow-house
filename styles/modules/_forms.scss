@@ -1,0 +1,52 @@
+%form-base {
+    @include text-style(16, $primary);
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    appearance: none;
+
+    &::placeholder {
+        color: $tertiary;
+    }
+
+    &:not(:disabled):hover {
+        background-color: $background;
+        transition: background-color 200ms ease-in-out;
+    }
+    
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+}
+
+input {
+    @extend %form-base;
+}
+
+.form-select {
+    @extend %form-base;
+}
+
+.select-group {
+    position: relative;
+    
+    .form-select {
+        padding-right: 40px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ic-caret {
+        @include pos-center-y;  
+        right: 8px;
+        font-size: 24px;
+        color: $tertiary;
+        pointer-events: none;
+    }
+}
