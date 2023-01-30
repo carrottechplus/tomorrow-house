@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div style="display: none" class="container">
+    <div style="display: block" class="container">
       <div class="row">
         <div class="col-sm-4 col-md-6 col-lg-4">
           <div style="background-color: hotpink">Column!</div>
@@ -135,9 +135,29 @@
           <i class="ic-caret" aria-hidden></i>
         </div>
       </div>
+
+      <!-- pagination -->
+      <div>
+        <div class="pagination">
+          <button type="button" class="page-control page-prev">
+            <i class="ic-chevron"></i>
+          </button>
+          <ol class="page-list">
+            <!-- li*5>a[href="/"]{$} -->
+            <li class="page-item"><a href="/">1</a></li>
+            <li class="page-item"><a href="/">2</a></li>
+            <li class="page-item is-active"><a href="/">3333</a></li>
+            <li class="page-item"><a href="/">4</a></li>
+            <li class="page-item"><a href="/">5</a></li>
+          </ol>
+          <button type="button" class="page-control page-next">
+            <i class="ic-chevron"></i>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="my-menu">
+    <!-- <div class="my-menu">
       <button
         type="button"
         class="my-menu-button"
@@ -156,6 +176,6 @@
           <li class="my-menu-item"><button type="button">로그아웃</button></li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
