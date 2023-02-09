@@ -1,0 +1,46 @@
+.gnb {
+    position: relative;
+    border-bottom: 1px solid $border;
+
+    &-wrapper {
+        @include flexbox(between);
+        height: 50px;
+    }
+    
+    &-right {
+        .button-group {
+            @include flexbox(end);
+        }
+
+        .search-gnb-button {
+            margin-right: 4px;
+        }
+    }
+
+    &-icon-button {
+        @include flexbox;
+        width: 32px;
+        height: 32px;
+        font-size:24px;
+        color: $secondary
+    }
+
+    &-menu-button {
+        color: $blue;
+    }
+    
+    .logo {
+        @include pos-center;
+
+        a { //inline 요소>> width, height 지정하기 전에는 auto임
+            display:block;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            height: 20px;
+        }
+    }
+
+}
