@@ -12,27 +12,17 @@
             @include flexbox(end);
         }
 
-        .search-gnb-button {
+
+        // gnb-icon-button component에는 gnb-icon-button 고유의 css만 옮기자
+        .gnb-icon-button.is-search {
             margin-right: 4px;
         }
-    }
-
-    &-icon-button {
-        @include flexbox;
-        width: 32px;
-        height: 32px;
-        font-size:24px;
-        color: $secondary
-    }
-
-    &-menu-button {
-        color: $blue;
     }
     
     .logo {
         @include pos-center;
 
-        a { //inline 요소>> width, height 지정하기 전에는 auto임
+        a { //inline 요소>> width, height 지정하기 전에는 auto임 , padding 위 아래 불가
             display:block;
         }
 
